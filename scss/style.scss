@@ -1,0 +1,96 @@
+@import   'config';
+
+
+
+// _style.scss
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light-color;
+  font-family: $font-stack;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.showcase {
+  @include set-background($primary-color);
+  height: 600px;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding:20px;
+    }
+
+    a {
+      color: set-text-color($primary-color);
+  border: none;
+  display: block;
+  position: relative;
+  background-color: #4285f4;
+  font-size: 20px;
+  font-weight: 400px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 25px 80px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 6px #1d4ff2;
+    }
+    a:hover{
+      box-shadow: 0 4px #1d4ff2;
+  top: 2px;
+    }
+    a:focus{
+      box-shadow:0 2px #1d4ff2;
+      top:2px;
+    }
+
+    a:hover {
+      color: $secondary-color;
+      text-decoration:none;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    img {
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+    p{
+     margin:20px 0;
+    }
+  }
+}
+@import  'utilities';
+@import 'buttons';
+@import 'mobile';
